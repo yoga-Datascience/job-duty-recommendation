@@ -2,5 +2,6 @@ streamlit
 pandas
 scikit-learn
 sentence-transformers
-spacy
-python -m spacy download en_core_web_sm
+streamlit==1.40.1
+spacy==3.8.0
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
