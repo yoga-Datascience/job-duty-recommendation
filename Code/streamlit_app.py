@@ -22,7 +22,7 @@ def load_geography_data(file_path):
 
 # Load geography data
 try:
-    geography_df = load_geography_data("/home/yoga/Archive/Projects/job-duty-recommendation/Code/Geography.csv")
+    geography_df = load_geography_data("Geography.csv")
     st.write("Geography Data Loaded Successfully!")
 except FileNotFoundError:
     st.error("Geography data file not found. Please ensure 'Geography.csv' is in the same directory.")
@@ -78,7 +78,7 @@ def load_job_data(file_path):
     return pd.read_csv(file_path, delimiter="\t")
 
 try:
-    duties_df = load_job_data("/home/yoga/Archive/Projects/job-duty-recommendation/Code/All_duties.txt")
+    duties_df = load_job_data("All_duties.txt")
     st.write("Dataset Loaded Successfully!")
     st.write(duties_df.head())
 except FileNotFoundError:
