@@ -4,6 +4,15 @@ from sentence_transformers import SentenceTransformer, util
 import streamlit as st
 import spacy
 import pandas as pd
+from spacy.cli import download
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    print("Downloading spaCy model...")
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
 
 st.title("Job Recommendation System")
 # User Inputs
