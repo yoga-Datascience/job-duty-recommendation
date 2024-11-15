@@ -2,21 +2,18 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer, util
 import streamlit as st
-import spacy
 import pandas as pd
 from spacy.cli import download
 import spacy
 from pathlib import Path
-
-# Load the model from the local directory
-model_path = Path("./models/en_core_web_sm")
+from spacy.cli import download
 
 try:
-    nlp = spacy.load(model_path)
+    nlp = spacy.load("en_core_web_sm")
 except OSError:
-    print("Downloading spaCy model...")
+    # Install the model if it's missing
     download("en_core_web_sm")
-    nlp = spacy.load(model_path)
+    nlp = spacy.load("en_core_web_sm")
 
 
 st.title("Job Recommendation System")
