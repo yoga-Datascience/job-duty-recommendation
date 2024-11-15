@@ -5,13 +5,18 @@ import streamlit as st
 import spacy
 import pandas as pd
 from spacy.cli import download
+import spacy
+from pathlib import Path
+
+# Load the model from the local directory
+model_path = Path("./models/en_core_web_sm")
 
 try:
-    nlp = spacy.load("en_core_web_sm")
+    nlp = spacy.load(model_path)
 except OSError:
     print("Downloading spaCy model...")
     download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
+    nlp = spacy.load(model_path)
 
 
 st.title("Job Recommendation System")
