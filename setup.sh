@@ -8,5 +8,6 @@ apt-get install -y python3-distutils
 echo "Installing setuptools for Python..."
 pip install setuptools
 
-echo "Downloading spaCy model..."
-python -m spacy download en_core_web_sm
+
+import spacy.cli
+spacy.cli.download("en_core_web_sm")
