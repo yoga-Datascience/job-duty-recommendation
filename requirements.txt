@@ -1,5 +1,5 @@
 streamlit==1.40.1
-torch==2.2.0
+torch==2.5.1
 sentence-transformers==2.2.2
 numpy==1.22.0
 spacy==3.7.2
