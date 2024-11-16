@@ -1,8 +1,8 @@
 setuptools
-numpy==1.22.0
+numpy>=1.26.0
+pandas>=2.2.3
 spacy==3.7.2
 thinc>=8.2.2,<8.3.0
 sentence-transformers==3.3.0
 streamlit==1.40.1
-pandas==2.2.3
-scikit-learn==1.5.2
+scikit-learn>=1.5.2
